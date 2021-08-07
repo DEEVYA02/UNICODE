@@ -1,0 +1,16 @@
+n = (input("enter value of n : "))
+n=int(n)
+counter = {}
+wordslist = []
+
+for i in range(n):
+  word = input()
+  wordslist.append(word)
+  if word in counter:
+    counter[word] += 1
+  else:
+    counter[word] = 1
+    
+print(len(counter))
+
+print(' '.join([str(counter[word])for word in counter]))
